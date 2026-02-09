@@ -1,0 +1,54 @@
+Arrays only
+#include <iostream>
+#include <cstdlib>   // for rand() and srand()
+#include <ctime>     // for time()
+
+using namespace std;
+
+int main() {
+    int numbers[20];
+    int even[20], odd[20];
+    int evenCount = 0, oddCount = 0;
+
+    // Seed random number generator
+    srand(time(0));
+
+    // Generate 20 random numbers between 1 and 100
+    for (int i = 0; i < 20; i++) {
+        numbers[i] = (rand() % 100) + 1;
+
+        // Separate even and odd numbers
+        if (numbers[i] % 2 == 0) {
+            even[evenCount] = numbers[i];
+            evenCount++;
+        } else {
+            odd[oddCount] = numbers[i];
+            odd[oddCount];
+            oddCount++;
+        }
+    }
+
+    // Display original array
+    cout << "Original Array:\n";
+    for (int i = 0; i < 20; i++) {
+        cout << numbers[i] << " ";
+    }
+
+    // Display even numbers
+    cout << "\n\nEven Numbers:\n";
+    for (int i = 0; i < evenCount; i++) {
+        cout << even[i] << " ";
+    }
+
+    // Display odd numbers
+    cout << "\n\nOdd Numbers:\n";
+    for (int i = 0; i < oddCount; i++) {
+        cout << odd[i] << " ";
+    }
+
+    return 0;
+}
+Even number condition
+number % 2 == 0
+Odd number condition
+number % 2 != 0
